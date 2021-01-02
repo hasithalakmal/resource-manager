@@ -1,0 +1,25 @@
+databaseChangeLog:
+#  - changeSet:
+#      id: createDatabase
+#      author: Hasitha Gamage
+#      changes:
+#        - sqlFile:
+#            dbms: mysql
+#            encoding: utf8
+#            endDelimiter: \n/\s*\n|\n/\s*$
+#            path: changelog/scripts/00-create-database.sql
+#            relativeToChangelogFile: true
+#            splitStatements: true
+#            stripComments: true
+  - changeSet:
+      id: createDataTable
+      author: Hasitha Gamage
+      changes:
+        - sqlFile:
+            dbms: mysql
+            encoding: utf8
+            endDelimiter: \n/\s*\n|\n/\s*$
+            path: changelog/scripts/01-create-file-data-table.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
