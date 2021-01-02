@@ -23,6 +23,6 @@
 hs_err_pid*
 
 secret_file.sh
-.idea/
+*.idea/
 *.iml
 */target/*
