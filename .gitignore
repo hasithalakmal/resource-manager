@@ -25,3 +25,4 @@ hs_err_pid*
 secret_file.sh
 .idea/
 *.iml
+*/target/*

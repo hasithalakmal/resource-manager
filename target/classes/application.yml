@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          okta:
+            user-name-attribute: email
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 500MB
+
+okta:
+  oauth2:
+    redirect-uri: /authorization-code/callback
+    issuer: ${OKTA_ISSUER}
+    clientId: ${OKTA_CLIENT_ID}
+    clientSecret: ${OKTA_CLIENT_SECRET}
+    scopes:
+    - profile
+    - email
+    - openid
+server:
+  port: 9090
