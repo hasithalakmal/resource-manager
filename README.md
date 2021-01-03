@@ -14,6 +14,8 @@ Also if you are plan to use this for a company or some organization, it would be
 2. Create okta account with the following configurations
 3. 9090 and 83 ports should be available in the server machine. If not you can change those configs accordingly.
 
+![alt text](https://raw.githubusercontent.com/hasithalakmal/resource-manager/main/misc/image/okta_integration.png)
+
 ### Setting Up
 1. Download/clone the repository
 2. update .env file with okta secrets
@@ -25,7 +27,7 @@ Also if you are plan to use this for a company or some organization, it would be
 My main intention was to play around with some of the technologies to myself. But it has ended with a good product. Since I thought to expose it as an open source project. Since this is a good sample project if you are trying to use the following technologies
 
 1. Spring boot with Java 11
-2. Frontend development with spring boot ([http://www.thymeleaf.org][http://www.thymeleaf.org])
+2. Frontend development with spring boot ([http://www.thymeleaf.org])
 3. Understand Okta and authorization code grant type
 4. Integrate java application with Okta identity management service
 5. Process Management Tools and it's usage
