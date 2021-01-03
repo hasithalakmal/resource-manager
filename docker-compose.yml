@@ -1,0 +1,39 @@
+version: '3'
+services:
+  resource-manager-app:
+    build: .
+    ports:
+      - "9090:9090"
+      - "83:80"
+    links:
+      - "database:RMS"
+    environment:
+      - "OKTA_ISSUER=${OKTA_ISSUER}"
+      - "OKTA_CLIENT_ID=${OKTA_CLIENT_ID}"
+      - "OKTA_CLIENT_SECRET=${OKTA_CLIENT_SECRET}"
+      - "MYSQL_JDBC_CONNECTION_URL=jdbc:mysql://database:3306/RMS?useUnicode=true&characterEncoding=UTF-8"
+      - "MYSQL_USER_NAME=${MYSQL_USER_NAME}"
+      - "MYSQL_USER_PASSWORD=${MYSQL_USER_PASSWORD}"
+    depends_on:
+      - database
+    networks:
+      - rms_mysql_net
+    volumes:
+      - "${LOCAL_FILE_LOCATION}:/var/www/html/smile24es/"
+  database:
+    image: mysql/mysql-server:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+      - "MYSQL_USER=${MYSQL_USER_NAME}"
+      - "MYSQL_PASSWORD=${MYSQL_USER_PASSWORD}"
+      - "MYSQL_DATABASE=RMS"
+    networks:
+      - rms_mysql_net
+    volumes:
+      - "${LOCAL_DB_LOCATION}:/var/lib/mysql"
+
+networks:
+  rms_mysql_net:
+    driver: bridge
