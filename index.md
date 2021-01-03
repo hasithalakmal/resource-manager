@@ -34,10 +34,13 @@ My main intention was to play around with some of the technologies to myself. Bu
 8. Save data outside docker container (Local HDD)
 9. Liquibase and how to create DDL structures when application starts.
 10. Using logback with spring and size base log rotation
+11. JQurey data table
+12. Boostrap basics
 
 # How others can help to improve this product
 I'm inviting to all of you to contribute for my project, these are the few improvements that you can play with.
 
 1. Delete file
-2. Udate file details
+2. Update file details
 3. Upload multiple files with some sequence number
+4. Make colorful UI
