@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Welcome to RMS
 
-You can use the [editor on GitHub](https://github.com/hasithalakmal/resource-manager/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+File management is a complex and common issue that every person/company is facing. With this RMS application you can easily manage your files. It contains just two steps. This is highly recommended for the Linux platform.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. Upload file with relevant data
+2. Search file by any details
 
-### Markdown
+Also if you are plan to use this for a company or some organization, it would be help evenyone to keep files hosted and search from every where. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Installation
 
-```markdown
-Syntax highlighted code block
+### Prerequisites
+1. Install docker compose
+2. Create okta account with the following configurations
+3. 9090 and 83 ports should be available in the server machine. If not you can change those configs accordingly.
 
-# Header 1
-## Header 2
-### Header 3
+### Setting Up
+1. Download/clone the repository
+2. update .env file with okta secrets
+3. execute `docker-compose build`
+4. execute `docker-compose run -d`
+5. execute this if you need to stop the service `docker-compose down`
 
-- Bulleted
-- List
+# Technology usage
+My main intention was to play around with some of the technologies to myself. But it has ended with a good product. Since I thought to expose it as an open source project. Since this is a good sample project if you are trying to use the following technologies
 
-1. Numbered
-2. List
+1. Spring boot with Java 11
+2. Frontend development with spring boot ([http://www.thymeleaf.org][http://www.thymeleaf.org])
+3. Understand Okta and authorization code grant type
+4. Integrate java application with Okta identity management service
+5. Process Management Tools and it's usage
+6. Docker compose
+7. Communicate between two docker containers using docker network
+8. Save data outside docker container (Local HDD)
+9. Liquibase and how to create DDL structures when application starts.
+10. Using logback with spring and size base log rotation
 
-**Bold** and _Italic_ and `Code` text
+# How others can help to improve this product
+I'm inviting to all of you to contribute for my project, these are the few improvements that you can play with.
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hasithalakmal/resource-manager/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+1. Delete file
+2. Udate file details
+3. Upload multiple files with some sequence number

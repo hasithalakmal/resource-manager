@@ -1,6 +1,6 @@
 version: '3'
 services:
-  resource-manager-app:
+  app:
     build: .
     ports:
       - "9090:9090"
