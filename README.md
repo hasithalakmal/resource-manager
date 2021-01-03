@@ -14,6 +14,8 @@ Also if you are plan to use this for a company or some organization, it would be
 2. Create okta account with the following configurations
 3. 9090 and 83 ports should be available in the server machine. If not you can change those configs accordingly.
 
+![alt text](https://raw.githubusercontent.com/hasithalakmal/resource-manager/main/misc/image/okta_integration.png)
+
 ### Setting Up
 1. Download/clone the repository
 2. update .env file with okta secrets
